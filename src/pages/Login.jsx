@@ -33,13 +33,12 @@ const Login = () => {
     });
   };
   useEffect(() => {
-   if(!localStorage.getItem("userInfo")){
-    
-   }else{
-     const userInfo = JSON.parse(localStorage.getItem("userInfo"));
-    setCorrectUsername(userInfo.userName);
-    setCorrectPassword(userInfo.password);
-   }
+    if (!localStorage.getItem("userInfo")) {
+    } else {
+      const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      setCorrectUsername(userInfo.userName);
+      setCorrectPassword(userInfo.password);
+    }
   });
   function handleSubmit() {
     setLoading(true);
@@ -80,12 +79,9 @@ const Login = () => {
       <Flex
         align-items="center"
         justify-contents="center"
-        w={["80%", "60%"]}
+        w={["70%", "30%"]}
         m="auto"
         flexDirection="column"
-        border="1px"
-        borderColor="gray.200"
-        borderRadius={"10px"}
         p={"10px"}
         marginTop={"100px"}
       >
