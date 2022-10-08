@@ -66,48 +66,51 @@ const Otp = () => {
       <Flex
         align-items="center"
         justify-contents="center"
-        w={["80%", "60%"]}
+        w={["70%", "40%"]}
         m="auto"
         flexDirection="column"
-        border="1px"
-        borderColor="gray.200"
-        borderRadius={"10px"}
         p={"10px"}
         marginTop={"100px"}
       >
         <Text
           color="white"
-          fontSize={30}
+          fontSize={["20px", "30px"]}
           textAlign="center"
           fontFamily="sans-serif"
         >
           OTP VERIFICATION 🤐🤫
         </Text>
-        <Box>
-          <HStack mt={"30px"}>
-            <PinInput placeholder="😚" otp onChange={(otp) => setPin(otp)}>
-              <PinInputField />
-              <PinInputField />
-              <PinInputField />
-              <PinInputField />
-              <PinInputField />
-              <PinInputField />
-            </PinInput>
-          </HStack>
-          <Button mt={"20px"} onClick={subMit} disabled={pin < 6 || loading}>
-            {loading ? (
-              <Spinner
-                thickness="4px"
-                speed="0.65s"
-                emptyColor="gray.200"
-                color="blue.500"
-                size="md"
-              />
-            ) : (
-              "submit"
-            )}
-          </Button>
-        </Box>
+
+        <HStack mt={"30px"}>
+          <PinInput placeholder="😚" otp onChange={(otp) => setPin(otp)}>
+            <PinInputField />
+            <PinInputField />
+            <PinInputField />
+            <PinInputField />
+            <PinInputField />
+            <PinInputField />
+          </PinInput>
+        </HStack>
+
+        <Button
+          backgroundColor="blue.500"
+          color="white"
+          mt={"20px"}
+          onClick={subMit}
+          disabled={pin < 6 || loading}
+        >
+          {loading ? (
+            <Spinner
+              thickness="4px"
+              speed="0.65s"
+              emptyColor="gray.200"
+              color="blue.500"
+              size="md"
+            />
+          ) : (
+            "submit"
+          )}
+        </Button>
       </Flex>
     </>
   );
