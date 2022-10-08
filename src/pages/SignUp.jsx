@@ -86,12 +86,9 @@ const SignUp = () => {
       <Flex
         align-items="center"
         justify-contents="center"
-        w={["80%", "60%"]}
+        w={["70%", "30%"]}
         m="auto"
         flexDirection="column"
-        border="1px"
-        borderColor="gray.200"
-        borderRadius={"10px"}
         p={"10px"}
         marginTop={"100px"}
       >
@@ -137,20 +134,20 @@ const SignUp = () => {
               setConfirmPassword(e.target.value);
             }}
           />
-          <Button backgroundColor="blue.500" color="white" onClick={handleForm}>
-            {loading ? (
-              <Spinner
-                thickness="4px"
-                speed="0.65s"
-                emptyColor="gray.200"
-                color="blue.500"
-                size="md"
-              />
-            ) : (
-              "Signup"
-            )}
-          </Button>
         </Box>
+        <Button backgroundColor="blue.500" color="white" onClick={handleForm}>
+          {loading ? (
+            <Spinner
+              thickness="4px"
+              speed="0.65s"
+              emptyColor="gray.200"
+              color="blue.500"
+              size="md"
+            />
+          ) : (
+            "Signup"
+          )}
+        </Button>
       </Flex>
     </>
   );
